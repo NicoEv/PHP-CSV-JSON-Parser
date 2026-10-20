@@ -122,7 +122,7 @@ class Parser {
         $json = json_encode($articles, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_THROW_ON_ERROR);
 
         if (file_put_contents($path, $json . "\n") === false) {
-            throw new RuntimeException("Ausgabedatei nicht schreibbar: {$path}");
+            throw new RuntimeException("Ausgabedatei ist nicht schreibbar: {$path}");
         }
     }
 
@@ -139,7 +139,7 @@ class Parser {
         );
  
         if (file_put_contents($path, implode("\n", $lines) . ($lines === [] ? '' : "\n")) === false) {
-            throw new RuntimeException("Fehlerprotokoll nicht schreibbar: {$path}");
+            throw new RuntimeException("Fehlerprotokoll ist nicht schreibbar: {$path}");
         }
     }
 
