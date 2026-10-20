@@ -24,10 +24,12 @@ Eine fehlerhafte Zeile wird protokolliert und übersprungen, das Programm läuft
 ## Bewusste Entscheidungen
 - Die CSV wird zeilenweise mithilfe eines Generators eingelesen damit nicht die gesamte Datei im speicher landet. Dies ist für besonders große Importe nützlich um das Programm weiterhin performant zu halten.
 - Im Price parser werden neben Euro Angaben auch Dollar Angaben gehandhabt. Weitere Währungen würden den zeitlichen Rahmen sprengen.
+- Die gesamte Anwendung funktioniert über eine einzelne Klasse damit es übersichtlich und weiterhin gut wartbar bleibt.
+  - Ausschließlich die verschiedenen Funktionen wurden in einzelne Methoden aufgeteilt.
 
 ## Mögliche Erweiterungen bei verbleibender Zeit
  
-- Tests (PHPUnit), vor allem für die Preisauswertung mit Grenzfällen.
+- Tests (PHPUnit / PHPStan), vor allem für die Preisauswertung mit Grenzfällen.
 - Preisvalidierung weiter ausbauen besonders für hohe Zahlen sowie andere Währungen.
 - Interface/UI für eine einfachere Bedienung sowie UX.
     - Simple Weboberfläche, in welcher man die Datei hochladen kann und dann entsprechend ausgewertet wird. In der aktuellen Anwendung sind gewisse technische Kenntnisse vonnöten um es nutzen zu können.
