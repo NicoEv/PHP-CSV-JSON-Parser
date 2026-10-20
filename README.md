@@ -1,4 +1,4 @@
-# PHP CSV TO JSON PARSER
+# PHP CSV Parser
 Liest eine Artikel-CSV, prüft und bereinigt die Zeilen und schreibt sie als JSON.
 
 ## Requirements
@@ -40,3 +40,4 @@ Eine fehlerhafte Zeile wird protokolliert und übersprungen, das Programm läuft
         ```
         if (!preg_match('/^\d+(\.\d+)?$/', $text)) ...
         ```
+- Konzeptionelle Ideen und Ansätze wurde ebenfalls durch KI hinterfragt um evtl. bessere Ansätze zu erhalten.
